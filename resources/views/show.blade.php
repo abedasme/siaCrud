@@ -3,7 +3,7 @@
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<h1 class="page-header text-center">Basic Crud Project</h1>
+<h1 class="page-header text-center">Angelo</h1>
 <div class="row">
     <div class="col-md-12 col-md-offset-1">
         <h3>Members Table
