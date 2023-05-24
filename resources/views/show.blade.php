@@ -1,5 +1,5 @@
 @extends('app')
- 
+
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -11,7 +11,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup ">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
         <a class="nav-link" href="#">Data Tables</a>
       </div>
     </div>
@@ -31,6 +30,7 @@
             <thead>
                 <th>Fisrtname</th>
                 <th>Lastname</th>
+                <th>Member Since</th>
                 <th>Action</th>
             </thead>
             <tbody>
@@ -38,9 +38,10 @@
                     <tr>
                         <td>{{$member->firstname}}</td>
                         <td>{{$member->lastname}}</td>
+                        <td>{{$member->created_at->format('Y-m-d')}}</td>
                         <td>
-                            <span type = "button" href="#edit{{$member->id}}" data-bs-toggle="modal" class = "text-success"><i class='fa fa-edit'></i> </span> 
-                            <span type = "button" href="#delete{{$member->id}}" data-bs-toggle="modal" class = "text-danger" ><i class='fa fa-trash red'></i> </span>
+                            <span type="button" href="#edit{{$member->id}}" data-bs-toggle="modal" class="text-success"><i class='fa fa-edit'></i> </span> 
+                            <span type="button" href="#delete{{$member->id}}" data-bs-toggle="modal" class="text-danger"><i class='fa fa-trash red'></i> </span>
                             @include('action')
                         </td>
                     </tr>
