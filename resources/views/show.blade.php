@@ -11,7 +11,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="#">Log out</a>
+        
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
 
 <div class="row">
     <div class="col-md-12 col-md-offset-1">
-        <table class="table table-secondary table-responsive table-striped table-hover">
+        <table class="table table-secondary table-responsive table-striped table-hover mb-5">
             <thead>
                 <tr>
                     <th>Firstname</th>
@@ -70,5 +70,11 @@
         </table>
     </div>
 </div>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">Copyright © 2023 by <span class="text-primary">Capbois</span> </span>
+  </div>
+</footer>
 
 @endsection
