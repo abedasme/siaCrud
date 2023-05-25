@@ -24,6 +24,19 @@
         </h3>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6 offset-md-6 my-3">
+        <form action="{{ route('members.index') }}" method="GET" class="d-flex justify-content-end">
+            <input type="text" name="search" class="form-control me-2" placeholder="Search members">
+            <button type="submit" class="btn btn-xs btn-primary">Search</button>
+            <a href="{{ route('members.index') }}" class="btn btn-sm btn-secondary ms-2">Show All</a>
+        </form>
+    </div>
+</div>
+
+
+
 <div class="row">
     <div class="col-md-12 col-md-offset-1">
         <table class="table table-secondary table-responsive table-striped table-hover">

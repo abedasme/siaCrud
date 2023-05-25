@@ -31,3 +31,5 @@ Route::post('/save', 'MemberController@save');
 Route::patch('/update/{id}', ['as' => 'member.update', 'uses' => 'MemberController@update']);
  
 Route::delete('/delete/{id}', ['as' => 'member.delete', 'uses' => 'MemberController@delete']);
+
+Route::get('/members', 'MemberController@index')->name('members.index');
