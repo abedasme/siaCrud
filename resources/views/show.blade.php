@@ -44,7 +44,8 @@
                     <th>Firstname</th>
                     <th>Lastname</th>
                     <th>Gender</th>
-                    <th>Birthdate</th> <!-- Added Birthdate column header -->
+                    <th>Birthdate</th>
+                    <th>Age</th> <!-- Added Age column header -->
                     <th>Member Since</th>
                     <th>Action</th>
                 </tr>
@@ -55,7 +56,8 @@
                         <td>{{$member->firstname}}</td>
                         <td>{{$member->lastname}}</td>
                         <td>{{$member->gender}}</td>
-                        <td>{{$member->birthdate}}</td> <!-- Added Birthdate column -->
+                        <td>{{$member->birthdate}}</td>
+                        <td>{{\Carbon\Carbon::parse($member->birthdate)->age}}</td> <!-- Calculate the age based on birthdate -->
                         <td>{{$member->created_at->format('m-d-Y')}}</td>
                         <td>
                             <span type="button" href="#edit{{$member->id}}" data-bs-toggle="modal" class="text-success"><i class='fa fa-edit'></i> </span> 
