@@ -21,6 +21,8 @@ class MemberController extends Controller
         $member = new Member;
         $member->firstname = $request->input('firstname');
         $member->lastname = $request->input('lastname');
+        $member->gender = $request->input('gender', 'male'); // Set default value to 'male' if no gender is selected
+        $member->birthdate = $request->input('birthdate');
         $member->save();
  
         return redirect('/');

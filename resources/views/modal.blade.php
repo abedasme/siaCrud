@@ -6,15 +6,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-                {!! Form::open(['url' => 'save']) !!}
-                    <div class="mb-3">
-                        {!! Form::label('firstname', 'Firstname') !!}
-                        {!! Form::text('firstname', '', ['class' => 'form-control', 'placeholder' => 'Input Firstname', 'required']) !!}
-                    </div>
-                    <div class="mb-3">
-                        {!! Form::label('lastname', 'Lastname') !!}
-                        {!! Form::text('lastname', '', ['class' => 'form-control', 'placeholder' => 'Input Lastname', 'required']) !!}
-                    </div>
+            {!! Form::open(['url' => 'save']) !!}
+            <div class="mb-3">
+                {!! Form::label('firstname', 'Firstname') !!}
+                {!! Form::text('firstname', '', ['class' => 'form-control', 'placeholder' => 'Input Firstname', 'required']) !!}
+            </div>
+            <div class="mb-3">
+                {!! Form::label('lastname', 'Lastname') !!}
+                {!! Form::text('lastname', '', ['class' => 'form-control', 'placeholder' => 'Input Lastname', 'required']) !!}
+            </div>
+            <div class="mb-3">
+                {!! Form::label('gender', 'Gender') !!}
+                {!! Form::select('gender', ['male' => 'Male', 'female' => 'Female'], null, ['class' => 'form-control', 'placeholder' => 'Select Gender', 'required']) !!}
+            </div>
+            <div class="mb-3">
+                {!! Form::label('birthdate', 'Birthdate') !!}
+                {!! Form::date('birthdate', null, ['class' => 'form-control', 'placeholder' => 'Select Birthdate', 'required']) !!}
+            </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
